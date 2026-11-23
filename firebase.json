@@ -1,0 +1,8 @@
+{
+  "hosting": {
+    "site": "wedding-a3f5b",
+    "public": "dist",
+    "ignore": ["**/.*", "**/node_modules/**", "_redirects", "music/*.txt"],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
+  }
+}

@@ -1,0 +1,7 @@
+import parse from "html-react-parser";
+
+// Original invitation markup preserved to retain its design exactly.
+const markup = "<section class=\"scene venue\" data-parallax=\"\" id=\"venue\">\n<div class=\"scene-photo\" style=\"--scene-image:url('https://www.weddingsutra.com/images/wedding-images/real_wed/featured/kajal-ajul/kajal-ajul-img29.jpg')\">\n</div>\n<div class=\"scene-shade\"></div>\n<div class=\"scene-content\">\n<p class=\"eyebrow reveal\">आपका हार्दिक स्वागत है</p>\n<h2 class=\"display-title reveal\">\n          The <em>Celebration</em>\n</h2>\n<div class=\"fine-line reveal\"></div>\n<div class=\"venue-symbol reveal\">⌖</div>\n<p class=\"family-label reveal\">WEDDING VENUE</p>\n<h3 class=\"venue-name reveal\">\n          Deen Bandhu Sir Chhoturam<br/>\n          Dharamshala\n        </h3>\n<p class=\"address reveal\">\n          B-4/6, Industrial Area,<br/>\n          Near Keshav Puram Metro Station,<br/>\n          Delhi – 110035\n        </p>\n<a class=\"gold-button reveal\" href=\"https://www.google.com/maps/search/?api=1&amp;query=Deen+Bandhu+Sir+Chhoturam+Dharamshala+B-4%2F6+Industrial+Area+Near+Keshav+Puram+Metro+Station+Delhi+110035\" rel=\"noopener noreferrer\" target=\"_blank\">\n          View Venue on Map ↗\n        </a>\n<p class=\"date-note reveal\">\n          Swagat Barat · Friday, 11 December 2026 · 5:00 PM\n        </p>\n</div>\n</section>";
+export default function Venue() {
+  return parse(markup);
+}

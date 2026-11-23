@@ -1,0 +1,7 @@
+import parse from "html-react-parser";
+
+// Original invitation markup preserved to retain its design exactly.
+const markup = "<section class=\"scene rsvp-scene\" data-parallax=\"\" id=\"rsvp\">\n<div class=\"scene-photo\" style=\"--scene-image:url('https://www.elegantjourneys.com/repositery/blog/wedding-venue-jaipur.jpeg')\">\n</div>\n<div class=\"scene-shade\"></div>\n<div class=\"scene-content\">\n<p class=\"eyebrow reveal\">Your Presence Is Our Present</p>\n<h2 class=\"display-title reveal\">\n          Kindly <em>RSVP</em>\n</h2>\n<div class=\"fine-line reveal\"></div>\n<p class=\"invitation-copy reveal\">\n          We would be delighted to celebrate with you.<br/>\n          Please share your wishes and confirm your presence.\n        </p>\n<button class=\"gold-button reveal\" id=\"mainRsvp\" type=\"button\">\n          Send Your RSVP via WhatsApp ↗\n        </button>\n<p class=\"family-label reveal contact-head\">\n          FOR RSVP &amp; ENQUIRIES\n        </p>\n<p class=\"rsvp-people reveal\">\n          Shriom Sharma · Ramakant<br/>\n          Vikash · Abhishek · Hardik\n        </p>\n<div class=\"phone-list reveal\">\n<a href=\"tel:+917014921070\">7014921070</a>\n<a href=\"tel:+919891448939\">9891448939</a>\n<a href=\"tel:+919818450505\">9818450505</a>\n<a href=\"tel:+918952025295\">8952025295</a>\n<a href=\"tel:+918882147702\">8882147702</a>\n</div>\n</div>\n</section>";
+export default function RSVP() {
+  return parse(markup);
+}
