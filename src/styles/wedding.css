@@ -1130,3 +1130,161 @@ a {
 .wedding-site .person-card {min-height:390px}
 @media(max-height:750px){.wedding-site .cover-content {padding:16px 14px}.wedding-site .cover-names{font-size:clamp(43px,5vw,65px)}.wedding-site .cover-verse{font-size:13px}}
 @media(max-width:600px){.wedding-site .cover-content {padding:28px 10px}.wedding-site .cover-names {font-size:clamp(46px,12vw,62px)}.wedding-site .person-card{min-height:275px}}
+
+/* =========================================
+   SWETA & VIKAS - FAMILY & FUNCTION UPDATES
+   ========================================= */
+
+/* BRIDE & GROOM */
+
+.wedding-site .couple-info {
+  align-items: stretch;
+}
+
+.wedding-site .person-card {
+  min-height: 430px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.wedding-site .person-card h3 {
+  margin-bottom: 17px;
+}
+
+.wedding-site .person-card .family-relation {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(19px, 2.2vw, 24px);
+  line-height: 1.4;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.wedding-site .person-card .family-location {
+  color: #f4d49c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(17px, 2vw, 21px);
+  font-style: italic;
+  line-height: 1.4;
+  text-align: center;
+  max-width: 360px;
+  margin: 18px auto 0;
+}
+
+/* WEDDING FUNCTION GRID */
+
+.wedding-site .events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 18px;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+.wedding-site .event-card {
+  width: 100%;
+  min-width: 0;
+  min-height: 225px;
+  height: 100%;
+  padding: 25px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* TIKA EVENT */
+
+.wedding-site .tika-card {
+  border: 1px solid #f2d18d;
+  background: linear-gradient(
+    145deg,
+    rgba(100, 32, 49, 0.95),
+    rgba(55, 9, 32, 0.94)
+  );
+}
+
+.wedding-site .tika-card h3 {
+  color: #ffe1a0;
+}
+
+.wedding-site .event-venue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 11px;
+  text-align: center;
+}
+
+.wedding-site .event-venue strong {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: #e8c68b;
+}
+
+.wedding-site .event-venue span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #fff1d5;
+}
+
+/* RSVP NAMES */
+
+.wedding-site .rsvp-people {
+  line-height: 1.6;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .wedding-site .events-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wedding-site .person-card {
+    min-height: 330px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .wedding-site .events-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+    max-width: 450px;
+  }
+
+  .wedding-site .event-card {
+    min-height: 170px;
+    padding: 22px 15px;
+  }
+
+  .wedding-site .tika-card {
+    min-height: 290px;
+  }
+
+  .wedding-site .person-card {
+    min-height: 310px;
+    padding: 25px 15px;
+  }
+
+  .wedding-site .person-card .family-relation {
+    font-size: 21px;
+  }
+
+  .wedding-site .person-card .family-location {
+    font-size: 18px;
+  }
+
+  .wedding-site .rsvp-people {
+    font-size: 23px;
+  }
+}

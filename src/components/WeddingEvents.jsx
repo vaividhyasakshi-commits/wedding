@@ -1,7 +1,125 @@
-import parse from "html-react-parser";
 
-// Original invitation markup preserved to retain its design exactly.
-const markup = "<section class=\"scene events\" data-parallax=\"\" id=\"events\">\n<div class=\"scene-photo\" style=\"--scene-image:url('https://weddingsandeventsbyamitesh.com/public/assets/img/1%20%284%29.webp')\">\n</div>\n<div class=\"scene-shade\"></div>\n<div class=\"scene-content\">\n<p class=\"eyebrow reveal\">शुभ विवाह कार्यक्रम</p>\n<h2 class=\"display-title reveal\">\n          Wedding <em>Celebrations</em>\n</h2>\n<div class=\"fine-line reveal\"></div>\n<p class=\"invitation-copy event-intro reveal\">\n          Join us for these cherished moments\n        </p>\n<div class=\"events-grid\">\n<article class=\"event-card reveal\">\n<span>10 DEC · THURSDAY</span>\n<h3>Haldi</h3>\n<p>12:15 PM</p>\n</article>\n<article class=\"event-card reveal\">\n<span>10 DEC · THURSDAY</span>\n<h3>Chak</h3>\n<p>2:00 PM</p>\n</article>\n<article class=\"event-card reveal\">\n<span>10 DEC · THURSDAY</span>\n<h3>Bhat</h3>\n<p>5:00 PM</p>\n</article>\n<article class=\"event-card reveal\">\n<span>11 DEC · FRIDAY</span>\n<h3>Swagat Barat</h3>\n<p>5:00 PM</p>\n</article>\n<article class=\"event-card reveal\">\n<span>12 DEC · SATURDAY</span>\n<h3>Doli</h3>\n<p>Taroon Ki Chhaya Mein</p>\n</article>\n</div>\n<p class=\"family-label reveal countdown-label\">\n          COUNTDOWN TO SWAGAT BARAT · 11 DECEMBER, 5 PM\n        </p>\n<div aria-label=\"Countdown to Swagat Barat\" class=\"countdown reveal\" role=\"timer\">\n<div class=\"countdown-box\">\n<strong id=\"days\">00</strong>\n<span>DAYS</span>\n</div>\n<div class=\"countdown-box\">\n<strong id=\"hours\">00</strong>\n<span>HOURS</span>\n</div>\n<div class=\"countdown-box\">\n<strong id=\"minutes\">00</strong>\n<span>MINUTES</span>\n</div>\n<div class=\"countdown-box\">\n<strong id=\"seconds\">00</strong>\n<span>SECONDS</span>\n</div>\n</div>\n</div>\n</section>";
 export default function WeddingEvents() {
-  return parse(markup);
+  const functions = [
+    {
+      date: "07 DEC · MONDAY",
+      name: "Tika",
+      time: "4:00 PM",
+      venue: [
+        "Inderprasat Colony, Ward-7",
+        "Near Shiv Mandir, Khori Road",
+        "Shahpura - 303103 (Raj.)",
+      ],
+    },
+    {
+      date: "10 DEC · THURSDAY",
+      name: "Haldi",
+      time: "12:15 PM",
+    },
+    {
+      date: "10 DEC · THURSDAY",
+      name: "Chak",
+      time: "2:00 PM",
+    },
+    {
+      date: "10 DEC · THURSDAY",
+      name: "Bhat",
+      time: "5:00 PM",
+    },
+    {
+      date: "11 DEC · FRIDAY",
+      name: "Swagat Barat",
+      time: "5:00 PM",
+    },
+    {
+      date: "12 DEC · SATURDAY",
+      name: "Doli",
+      time: "Taroon Ki Chhaya Mein",
+    },
+  ];
+
+  return (
+    <section className="scene events" id="events" data-parallax>
+      <div
+        className="scene-photo"
+        style={{
+          "--scene-image":
+            "url('https://weddingsandeventsbyamitesh.com/public/assets/img/1%20%284%29.webp')",
+        }}
+      />
+
+      <div className="scene-shade" />
+
+      <div className="scene-content">
+        <p className="eyebrow reveal">शुभ विवाह कार्यक्रम</p>
+
+        <h2 className="display-title reveal">
+          Wedding <em>Celebrations</em>
+        </h2>
+
+        <div className="fine-line reveal" />
+
+        <p className="invitation-copy event-intro reveal">
+          Join us for these cherished moments
+        </p>
+
+        <div className="events-grid">
+          {functions.map((event) => (
+            <article
+              className={`event-card reveal ${
+                event.name === "Tika" ? "tika-card" : ""
+              }`}
+              key={event.name}
+            >
+              <span>{event.date}</span>
+
+              <h3>{event.name}</h3>
+
+              <p>{event.time}</p>
+
+              {event.venue && (
+                <div className="event-venue">
+                  <strong>VENUE</strong>
+
+                  {event.venue.map((line) => (
+                    <span key={line}>{line}</span>
+                  ))}
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
+
+        <p className="family-label reveal countdown-label">
+          COUNTDOWN TO SWAGAT BARAT · 11 DECEMBER, 5 PM
+        </p>
+
+        <div
+          className="countdown reveal"
+          role="timer"
+          aria-label="Countdown to Swagat Barat"
+        >
+          <div className="countdown-box">
+            <strong id="days">00</strong>
+            <span>DAYS</span>
+          </div>
+
+          <div className="countdown-box">
+            <strong id="hours">00</strong>
+            <span>HOURS</span>
+          </div>
+
+          <div className="countdown-box">
+            <strong id="minutes">00</strong>
+            <span>MINUTES</span>
+          </div>
+
+          <div className="countdown-box">
+            <strong id="seconds">00</strong>
+            <span>SECONDS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
